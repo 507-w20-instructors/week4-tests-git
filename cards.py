@@ -146,18 +146,22 @@ class Deck:
         return hand_cards
 
 def print_hand(hand):
-    hand_str = ''
+    '''prints a hand in a compact form
+    
+
+    Parameters  
+    -------------------
+    hand: list
+        list of Cards to print
+
+    Returns
+    -------
+    none
+
+    '''
+    hand_str = '/ '
     for c in hand:
         s = c.suit_name[0]
         r = c.rank_name[0]
-        hand_str += r + " of " + s + '/'
+        hand_str += r + "of" + s + ' / '
     print(hand_str)
-
-
-### SELF TESTING
-
-d = Deck()
-d.shuffle()
-hand = d.deal_hand(5)
-for c in hand:
-    print(c)
