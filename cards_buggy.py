@@ -39,13 +39,13 @@ class Card:
 
     def __init__(self, suit=0,rank=2):
         self.suit = suit
-        self.suit_name = Card.suit_names[self.suit]
+        self.suit_name = Card.suit_names[self.suit + 1]
 
         self.rank = rank
         if self.rank in Card.faces:
             self.rank_name = Card.faces[self.rank]
         else:
-            self.rank_name = str(self.rank)
+            self.rank_name = self.rank
  
     def __str__(self):
         return f"{self.rank_name} of {self.suit_name}"

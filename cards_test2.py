@@ -18,7 +18,7 @@ class TestCard(unittest.TestCase):
         self.assertIsInstance(c1.rank_name, str)
 
         self.assertEqual(c2.suit, 1)
-        self.assertEqual(c2.suit_name, "Clubs")
+        self.assertEqual(c2.suit_name, "Hearts")
         self.assertEqual(c2.rank, 1)
         self.assertEqual(c2.rank_name, "Ace")
 
