@@ -1,7 +1,7 @@
 import random
 import unittest
- 
-######### DO NOT CHANGE PROVIDED CODE #########
+
+VERSION = 0.01
  
 class Card:
     '''a standard playing card
@@ -144,7 +144,15 @@ class Deck:
         for i in range(hand_size):
             hand_cards.append(self.deal_card())
         return hand_cards
- 
+
+def print_hand(hand):
+    hand_str = ''
+    for c in hand:
+        s = c.suit_name[0]
+        r = c.rank_name[0]
+        hand_str += r + " of " + s + '/'
+    print(hand_str)
+
 
 ### SELF TESTING
 
